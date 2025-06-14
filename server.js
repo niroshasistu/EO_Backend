@@ -12,7 +12,10 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    "https://eo-frontend.vercel.app"
+  ],
   credentials: true // if sending cookies
 }));
 app.use(express.json());
